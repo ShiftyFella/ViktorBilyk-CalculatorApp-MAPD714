@@ -10,6 +10,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var isDotClick = false;
+    
+    @IBOutlet weak var displayCalc: UILabel!
+    
+    @IBAction func dotClick(_ sender: UIButton) {
+        // dot clicked
+        //
+    }
+    
+    @IBAction func numbersClick(_ sender: UIButton) {
+        // NumPad press
+        //
+    }
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
