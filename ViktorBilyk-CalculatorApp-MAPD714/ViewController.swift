@@ -42,6 +42,10 @@ class ViewController: UIViewController {
         onScreenNumber = Double(displayCalc.text!)!
     }
     
+    @IBAction func operatorClick(_ sender: UIButton) {
+        // Operation button clicked
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
