@@ -16,18 +16,33 @@ class ViewController: UIViewController {
     
     @IBAction func dotClick(_ sender: UIButton) {
         // dot clicked
-        //
+        if (isDotClick == false) {
+            displayCalc.text = displayCalc.text! + "."
+            isDotClick = true
+        }
+    }
+    
+    @IBAction func clearClick(_ sender: UIButton) {
+        // clear clicked
+        displayCalc.text = "0"
+        isDotClick = false
     }
     
     @IBAction func numbersClick(_ sender: UIButton) {
         // NumPad press
-        //
+        if ( displayCalc.text == "0")  {
+            displayCalc.text = String(sender.tag-1)
+        }
+        else {
+            displayCalc.text = displayCalc.text! + String(sender.tag-1)
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        displayCalc.text = "0"
     }
 
     override func didReceiveMemoryWarning() {
