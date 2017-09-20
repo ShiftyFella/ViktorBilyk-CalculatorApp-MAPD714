@@ -10,7 +10,10 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var isDotClick = false;
+    var isDotClick:Bool = false //checks if dot is clicked
+    var onScreenNumber:Double = 0 // number shown on screen [used for calculations]
+    var resultNumber:Double = 0 // result of calculations
+    
     
     @IBOutlet weak var displayCalc: UILabel!
     
@@ -36,6 +39,7 @@ class ViewController: UIViewController {
         else {
             displayCalc.text = displayCalc.text! + String(sender.tag-1)
         }
+        onScreenNumber = Double(displayCalc.text!)!
     }
     
     
